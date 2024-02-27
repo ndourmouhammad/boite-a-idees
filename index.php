@@ -1,42 +1,49 @@
+<?php
+require('cnx.php');
+session_start();
+
+// Vérifie si l'utilisateur est connecté
+if (isset($_SESSION['utilisateur'])) {
+    // Récupère les informations de l'utilisateur
+    $utilisateur = $_SESSION['utilisateur'];
+} else {
+    // Redirige l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header("Location: login.php");
+    exit(); // Assure que le script s'arrête après la redirection
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Connexion</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="accueil.css">
+    <title>Boite à Idées</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Bienvenue sur la plateforme de boîte à Idées Collaborative</h1>
-        <h2>Connexion</h2>
-        <?php
-        include('cnx.php');
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Récupérer les données du formulaire
-            $email = $_POST["email"];
-            $password = $_POST["password"];
 
-            // Appeler la fonction de connexion
-            if (connexion($cnx, $email, $password)) {
-                header("Location: page_accueil.php"); 
-                exit();
-            } else {
-                echo "Adresse email ou mot de passe incorrect."; 
-            }
-        } 
-        ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" name="email" placeholder="Votre adresse email">
+<body>
+    <header>
+        <nav class="navbar1">
+            <a href="#">Accueil</a>
+            <a href="#">Ajouter une idée</a>
+        </nav>
+        <nav class="navbar2">
+            <a href="deconnexion.php">Déconnexion</a>
+            <!-- Affiche le nom de l'utilisateur -->
+            <a href="#"><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?></a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Liste des Idées</h2>
+        <?php while ($data = $req1->fetch(PDO::FETCH_ASSOC)) { ?>
+            <div class="category-box">
+                <p class="category-title">Catégorie: <?= ucfirst($data['Categorie']); ?></p>
+                <p class="idea-description">Idee: <?= ucfirst($data['idees']); ?></p>
+                <p class="idea-date">ajoutée le <?= ($data['date_ajout']); ?></p>
             </div>
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" placeholder="Votre mot de passe">
-            </div>
-            <button type="submit">Se Connecter</button>
-        </form>
+        <?php } ?>
     </div>
 </body>
+
 </html>
