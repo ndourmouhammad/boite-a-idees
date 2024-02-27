@@ -1,0 +1,64 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-box {
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.idea-description {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+.idea-date {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* Pour alterner les couleurs des catégories */
+.category-box:nth-child(even) {
+    background-color: #CE0033;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+.navbar1 , .navbar2 {
+    color: black;
+    display: flex;
+    gap: 50px;
+}
+
+.navbar1 a,
+.navbar2 a {
+    display: inline-block;
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+.navbar1 a:hover,
+.navbar2 a:hover {
+    color: #CE0033;
+    font-weight: bold; 
+}
