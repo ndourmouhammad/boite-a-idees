@@ -1,6 +1,6 @@
 <?php
 require('cnx.php');
-session_start();
+
 
 // Vérifie si l'utilisateur est connecté
 if (isset($_SESSION['utilisateur'])) {
@@ -18,29 +18,19 @@ if (isset($_SESSION['utilisateur'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="accueil.css">
+   <link rel="stylesheet" href="page-index.css">
     <title>Boite à Idées</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar1">
-            <a href="#">Accueil</a>
-            <a href="#">Ajouter une idée</a>
-        </nav>
-        <nav class="navbar2">
-            <a href="deconnexion.php">Déconnexion</a>
-            <!-- Affiche le nom de l'utilisateur -->
-            <a href="#"><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?></a>
-        </nav>
-    </header>
+    <?php include('header.php') ?>
     <div class="container">
         <h2>Liste des Idées</h2>
         <?php while ($data = $req1->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="category-box">
                 <p class="category-title">Catégorie: <?= ucfirst($data['Categorie']); ?></p>
                 <p class="idea-description">Idee: <?= ucfirst($data['idees']); ?></p>
-                <p class="idea-date">ajoutée le <?= ($data['date_ajout']); ?></p>
+                <p class="idea-date">ajoutée le <?= ($data['date_ajout']); ?> par <?= ucfirst($data['prenom']); ?> <?= ucfirst($data['nom']); ?></p>
             </div>
         <?php } ?>
     </div>
