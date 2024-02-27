@@ -9,19 +9,19 @@ body {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #FFFFFF;;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #FFFFFF;;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
-    color: #007bff;
+    color: #CE0033;
 }
 
 h2 {
-    color: #555;
+    color: black;
 }
 
 .form-group {
@@ -31,14 +31,14 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: black;
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #FFFFFF;
     border-radius: 5px;
     transition: border-color 0.3s ease;
 }
@@ -46,14 +46,14 @@ input[type="password"] {
 input[type="email"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #CE0033;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #CE0033;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -61,7 +61,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #CE0033;
 }
 
 
