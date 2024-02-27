@@ -1,7 +1,6 @@
 <?php
 require('cnx.php');
 
-
 // Vérifie si l'utilisateur est connecté
 if (isset($_SESSION['utilisateur'])) {
     // Récupère les informations de l'utilisateur
@@ -18,7 +17,7 @@ if (isset($_SESSION['utilisateur'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="page-index.css">
+    <link rel="stylesheet" href="page-index.css">
     <title>Boite à Idées</title>
 </head>
 
@@ -29,7 +28,9 @@ if (isset($_SESSION['utilisateur'])) {
         <?php while ($data = $req1->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="category-box">
                 <p class="category-title">Catégorie: <?= ucfirst($data['Categorie']); ?></p>
-                <p class="idea-description">Idee: <?= ucfirst($data['idees']); ?></p>
+                <p class="idea-description">
+                    <a href="detail.php?id=<?= $data['id']; ?>">Idee: <?= ucfirst($data['idees']); ?></a>
+                </p>
                 <p class="idea-date">ajoutée le <?= ($data['date_ajout']); ?> par <?= ucfirst($data['prenom']); ?> <?= ucfirst($data['nom']); ?></p>
             </div>
         <?php } ?>

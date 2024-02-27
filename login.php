@@ -1,3 +1,22 @@
+<?php
+require('cnx.php');
+function connexion($cnx, $email, $password)
+{
+    $req = $cnx->prepare("SELECT * FROM Utilisateur WHERE email = :email AND mdp = :mdp");
+    $req->bindParam(':email', $email);
+    $req->bindParam(':mdp', $password);
+    $req->execute();
+    $utilisateur = $req->fetch(PDO::FETCH_ASSOC);
+    if ($utilisateur) {
+        // Démarrage de la session
+        session_start();
+        $_SESSION['utilisateur'] = $utilisateur;
+        return true;
+    } else {
+        return false;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +30,7 @@
     <div class="box">
         <h2>Connexion</h2>
         <?php
-        require('cnx.php');
+        
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Récupérer les données du formulaire
             $email = $_POST["email"];
