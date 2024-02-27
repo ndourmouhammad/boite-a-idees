@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     if ($count > 0) {
         // Affiche un message de succès si l'idée a été supprimée
         echo "L'idée a été supprimée avec succès.";
-        
+        header("Location: index.php");
     } else {
         echo "L'idée avec l'ID spécifié n'existe pas.";
         // Redirige vers la page d'accueil
