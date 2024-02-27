@@ -11,7 +11,7 @@ body {
 }
 
 .category-box {
-    background-color: black;
+    background-color: #7451EB;
     border: 2px solid #FFFFFF;;
     border-radius: 10px;
     padding: 10px;
@@ -24,10 +24,17 @@ body {
     color: #FFFFFF;
 }
 
-.idea-description {
+.idea-description a{
     font-size: 16px;
     color: #FFFFFF;
+    text-decoration: none;
 }
+.idea-description a:hover {
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+
 .idea-date {
     font-size: 16px;
     color: #FFFFFF;
@@ -62,5 +69,4 @@ header {
     color: #CE0033;
     font-weight: bold; 
 }
-
 
