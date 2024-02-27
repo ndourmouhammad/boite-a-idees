@@ -15,13 +15,17 @@ function connexion($cnx, $email, $password)
     $req->bindParam(':email', $email);
     $req->bindParam(':mdp', $password);
     $req->execute();
-
-    if ($req->rowCount() > 0) {
+    $utilisateur = $req->fetch(PDO::FETCH_ASSOC);
+    if ($utilisateur) {
+        // Démarrage de la session
+        session_start();
+        $_SESSION['utilisateur'] = $utilisateur;
         return true;
     } else {
         return false;
     }
 }
+
 
 
 

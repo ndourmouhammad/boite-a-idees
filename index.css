@@ -1,44 +1,45 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
 }
 
-.container {
+.box {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    border: 1px solid #FFFFFF;;
+    border: 1px solid #CCCCCC; /* Correction de la couleur de la bordure */
     border-radius: 10px;
-    background-color: #FFFFFF;;
+    background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 h1 {
     color: #CE0033;
+    text-align: center;
 }
 
 h2 {
-    color: black;
+    color: #333333; /* Correction de la couleur */
 }
 
-.form-group {
+.group {
     margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: black;
+    color: #333333; /* Correction de la couleur */
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #CCCCCC; /* Correction de la couleur de la bordure */
     border-radius: 5px;
     transition: border-color 0.3s ease;
 }
@@ -61,10 +62,5 @@ button {
 }
 
 button:hover {
-    background-color: #CE0033;
+    background-color: #FF3333; /* Correction de la couleur au survol */
 }
-
-
-/* page d'accueil */
-
-
