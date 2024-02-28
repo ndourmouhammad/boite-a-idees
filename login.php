@@ -26,8 +26,9 @@ function connexion($cnx, $email, $password)
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Bienvenue sur la plateforme de boîte à Idées Collaborative</h1>
+
     <div class="box">
+    <h1>Bienvenue sur la plateforme de boîte à Idées Collaborative</h1>
         <h2>Connexion</h2>
         <?php
         

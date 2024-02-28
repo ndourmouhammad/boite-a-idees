@@ -3,10 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
+    background-image: url(img/bg.jpg); 
+    background-position: center; 
 }
 
+
+
 .box {
-    max-width: 400px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #CCCCCC; /* Correction de la couleur de la bordure */
@@ -22,7 +26,7 @@ h1 {
 }
 
 h2 {
-    color: #333333; /* Correction de la couleur */
+    color: black;
 }
 
 .group {
@@ -37,7 +41,7 @@ label {
 
 input[type="email"],
 input[type="password"] {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     border: 1px solid #CCCCCC; /* Correction de la couleur de la bordure */
     border-radius: 5px;
@@ -51,7 +55,7 @@ input[type="password"]:focus {
 }
 
 button {
-    width: 100%;
+    width: 20%;
     padding: 10px;
     background-color: #CE0033;
     color: #FFFFFF;
