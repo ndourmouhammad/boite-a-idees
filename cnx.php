@@ -35,8 +35,7 @@ $categories = [
     ['id' => 1, 'nom' => 'Suggestions'],
     ['id' => 2, 'nom' => 'Recommandations'],
     ['id' => 3, 'nom' => 'Propositions'],
-    ['id' => 4, 'nom' => 'Projets'],
-    ['id' => 5, 'nom' => 'Autres'],
+    ['id' => 4, 'nom' => 'Projets']
 ];
 
 $sql2 = $cnx->prepare("INSERT INTO Idees (libelle, texte, statut, date_creation, id_cat, id_utilisateur) VALUES (:libelle, :texte, :statut, :date_creation, :id_cat, :id_utilisateur)");
