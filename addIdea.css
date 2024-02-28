@@ -57,7 +57,7 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
+input[type="text"],input[type="tel"],input[type="password"],input[type="email"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -110,4 +110,10 @@ input[type="submit"]:hover {
 .update-delete:hover {
     cursor: pointer;
     
+}
+
+p a {
+    text-decoration: none;
+    color: #45a049;
+    font-weight: bold;
 }

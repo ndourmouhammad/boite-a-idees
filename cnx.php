@@ -26,3 +26,26 @@ $req2->execute();
 
 // Ajouter une idée
 
+
+$categories = [
+    ['id' => 1, 'nom' => 'Suggestions'],
+    ['id' => 2, 'nom' => 'Recommandations'],
+    ['id' => 3, 'nom' => 'Propositions'],
+    ['id' => 4, 'nom' => 'Projets']
+];
+
+$sql2 = $cnx->prepare("INSERT INTO Idees (libelle, texte, statut, date_creation, id_cat, id_utilisateur) VALUES (:libelle, :texte, :statut, :date_creation, :id_cat, :id_utilisateur)");
+
+if (isset($_POST['categories'])) {
+    foreach ($_POST['categories'] as $id_cat) {
+        $sql_insert = $cnx->prepare("INSERT INTO Idees (libelle, texte, statut, date_creation, id_cat, id_utilisateur) VALUES (:libelle, :texte, :statut, :date_creation, :id_cat, :id_utilisateur)");
+        $sql_insert->execute(array(
+            ':libelle' => $_POST['libelle'],
+            ':texte' => $_POST['texte'],
+            ':statut' => $_POST['statut'],
+            ':date_creation' => date("Y-m-d H:i:s"),
+            ':id_cat' => $id_cat,
+            ':id_utilisateur' => $_SESSION['utilisateur']['id']
+        ));
+    }
+}

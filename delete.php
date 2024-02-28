@@ -15,14 +15,13 @@ if (isset($_GET['id'])) {
         // Affiche un message de succès si l'idée a été supprimée
         echo "L'idée a été supprimée avec succès.";
         header("Location: index.php");
+        exit();
     } else {
         echo "L'idée avec l'ID spécifié n'existe pas.";
         // Redirige vers la page d'accueil
-header("Location: index.php");
-exit();
+        header("Location: index.php");
+        exit();
     }
 } else {
     echo "Aucun ID d'idée spécifié.";
 }
-
-?>

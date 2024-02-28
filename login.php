@@ -56,6 +56,7 @@ function connexion($cnx, $email, $password)
             </div>
             <button type="submit">Se Connecter</button>
         </form>
+        <p>Vous n'avez pas de compte, veuillez s'incrire <a href="inscription.php">ici</a></p>
     </div>
 </body>
 </html>
