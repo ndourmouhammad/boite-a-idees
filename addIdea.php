@@ -1,5 +1,17 @@
 <?php
 require('cnx.php');
+$libelle = "Votre libellé";
+$texte = "Votre texte";
+$statut = "Statut de votre idée";
+$date_creation = date("Y-m-d H:i:s");
+
+
+$categories = [
+    ['id' => 1, 'nom' => 'Suggestions'],
+    ['id' => 2, 'nom' => 'Recommandations'],
+    ['id' => 3, 'nom' => 'Propositions'],
+    ['id' => 4, 'nom' => 'Projets']
+];
 ?>
 
 <!DOCTYPE html>

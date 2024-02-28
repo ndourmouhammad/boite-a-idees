@@ -25,10 +25,6 @@ $req2 = $cnx->prepare($sql2);
 $req2->execute();
 
 // Ajouter une idée
-$libelle = "Votre libellé";
-$texte = "Votre texte";
-$statut = "Statut de votre idée";
-$date_creation = date("Y-m-d H:i:s");
 
 
 $categories = [
