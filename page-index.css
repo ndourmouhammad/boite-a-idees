@@ -10,8 +10,9 @@ body {
     padding: 20px;
 }
 
+
 .category-box {
-    background-color: #7451EB;
+    background-color: #CE0033;
     border: 2px solid #FFFFFF;;
     border-radius: 10px;
     padding: 10px;
@@ -30,7 +31,6 @@ body {
     text-decoration: none;
 }
 .idea-description a:hover {
-    font-size: 25px;
     font-weight: bold; 
 }
 
@@ -40,10 +40,11 @@ body {
     color: #FFFFFF;
 }
 
-/* Pour alterner les couleurs des catégories */
+/* Pour alterner les couleurs des catégories
 .category-box:nth-child(even) {
     background-color: #CE0033;
 }
+ */
 
 header {
     display: flex;
@@ -69,4 +70,3 @@ header {
     color: #CE0033;
     font-weight: bold; 
 }
-
