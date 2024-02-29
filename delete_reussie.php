@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/addIdea.css">
-    <title>Inscription réussie avec succès</title>
+    <title>Suppression réussie avec succès</title>
 </head>
 <body>
+<?php include('header.php') ?>
 <div class="container">
-<p>Inscription réussie</p>
-<p><a href="login.php">Aller sur la page de connexion</a></p>
+<p>Votre idée a été bien supprimé</p>
+<p><a href="index.php">Aller sur la page d'accueil</a></p>
 </div>
 </body>
 </html>
