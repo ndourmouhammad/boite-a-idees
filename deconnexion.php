@@ -1,6 +1,4 @@
 <?php
-// Démarrer la session si ce n'est pas déjà fait
-
 // Détruire toutes les données de session
 session_destroy();
 

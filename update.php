@@ -1,7 +1,7 @@
 <?php
 require('cnx.php');
 
-// Fetch idea details based on ID from the database
+//Récupérer les détails de l'idée basée sur son identifiant depuis la base de données
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = $cnx->prepare("SELECT * FROM Idees WHERE id = :id");
@@ -9,7 +9,7 @@ if(isset($_GET['id'])) {
     $idee = $sql->fetch(PDO::FETCH_ASSOC);
 }
 
-// Fetch categories from the database
+// Récupérer les catégories depuis la base de données
 $sqlCategories = $cnx->prepare("SELECT * FROM Categorie");
 $sqlCategories->execute();
 $categories = $sqlCategories->fetchAll(PDO::FETCH_ASSOC);
