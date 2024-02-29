@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="addIdea.css">
+    <link rel="stylesheet" href="styles/addIdea.css">
     <title>Idée ajoutée avec succès</title>
 </head>
 <body>
